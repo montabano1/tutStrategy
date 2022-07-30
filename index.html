@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.11/katex.min.js" integrity="sha512-1kNZVA50gKlorLAWU83+SdOAUwABzfFFQ4WuOAZTeS/UhNhnm9zU7rDv/Q5NEzSnr5u2L6uhR/+8icjjmHjSnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.11/katex.min.css" integrity="sha512-J8je2SgrCzA7hNBeiCJiA6oETHTTdp3We3EriOgJp6POycGLcDXj5dSwWlAPQcYGeaQ4N3uf30aOg/Nt5pxW2g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script src="fbase.js" defer>
+
+</script>
+    <script src="javascript.js"></script>
+  </head>
+  <body>
+    <div class="inputs">
+      <div class="">
+        <p><label>question tutorfreeID:</label></p>
+        <input type="text" id="tutorfreeID">
+        <button onclick="getQuestion()" class="submitStrategy buttonSingle" type="button" name="submitStrategy">Get Question</button>
+        <button onclick="nextQuestion()" class="submitStrategy buttonSingle" type="button" name="submitStrategy">Next Question</button>
+      </div>
+      <div class="questionText">
+        <p><label>question:</label></p>
+        <div id="questionText" rows="8" cols="80"></div>
+      </div>
+
+      <div class="questionText">
+        <p><label>ans1:</label></p>
+        <div id="ans1" rows="8" cols="80"></div>
+      </div>
+      <div class="questionText">
+        <p><label>ans2:</label></p>
+        <div id="ans2" rows="8" cols="80"></div>
+      </div>
+      <div class="questionText">
+        <p><label>ans3:</label></p>
+        <div id="ans3" rows="8" cols="80"></div>
+      </div>
+      <div class="questionText">
+        <p><label>ans4:</label></p>
+        <div id="ans4" rows="8" cols="80"></div>
+      </div>
+
+      <p><label>Explanation:</label></p>
+      <div class="everything">
+        <textarea id="explanationInput" name="textInput" class="stratInput" rows="10" cols="80"></textarea>
+        <div class="buttons">
+          <button onclick="latexTapped(stratInput)" class="latexButton buttonSingle" type="button" name="latexButton">LATEX</button>
+          <button onclick="endlatexTapped(stratInput)" class="endlatexButton buttonSingle" type="button" name="endlatexButton">ENDLATEX</button>
+          <button onclick="fracTapped(stratInput)" class="fracButton buttonSingle" type="button" name="fracButton">FRAC</button>
+          <button onclick="sqrtTapped(stratInput)" class="sqrtButton buttonSingle" type="button" name="sqrtButton">SQRT</button>
+        </div>
+        <div id="result0" class="result"></div>
+      </div>
+      <p><label>MonteWay:</label></p>
+      <div class="everything">
+        <textarea id="montewayInput" name="formulaInput" class="stratInput" rows="10" cols="80"></textarea>
+        <div class="buttons">
+          <button onclick="latexTapped(formulaInput)" class="latexButton buttonSingle" type="button" name="latexButton">LATEX</button>
+          <button onclick="endlatexTapped(formulaInput)" class="endlatexButton buttonSingle" type="button" name="endlatexButton">ENDLATEX</button>
+          <button onclick="fracTapped(formulaInput)" class="fracButton buttonSingle" type="button" name="fracButton">FRAC</button>
+          <button onclick="sqrtTapped(formulaInput)" class="sqrtButton buttonSingle" type="button" name="sqrtButton">SQRT</button>
+        </div>
+        <div id="result1" class="result"></div>
+      </div>
+      <button onclick="submitExplanation()" class="submitStrategy buttonSingle" type="button" name="submitStrategy">SUBMIT!!!</button>
+
+    </div>
+
+
+  </body>
+</html>

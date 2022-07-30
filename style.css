@@ -1,0 +1,40 @@
+.strategyInput {
+  font-family: Arial;
+  height: 500px;
+  width: 300px;
+  display: flex;
+  margin-right: 10px;
+}
+.stratInput {
+  min-width: 300px;
+}
+
+.flexMe {
+  display: -webkit-box;
+}
+
+.everything {
+  display: flex;
+
+}
+
+.latexButton {
+  margin-right: 50px;
+}
+
+.buttons {
+  max-width: 100px;
+  margin-right: 100px;
+}
+
+.buttonSingle {
+  margin: 10px;
+}
+
+.questionText {
+  display: flex;
+}
+
+.result {
+  display: inline-block;
+}
