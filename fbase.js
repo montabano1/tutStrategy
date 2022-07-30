@@ -147,6 +147,7 @@ function getStrategy() {
     if (data["matching"] == true) {
       document.getElementById("matching").checked = true
     } else {
+      console.log("ok")
       document.getElementById("notmatching").checked = true
     }
 

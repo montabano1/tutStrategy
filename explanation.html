@@ -18,16 +18,36 @@
   <body>
     <div class="inputs">
       <div class="">
-        <p><label>Strategy Name:</label></p>
-        <input type="text" id="stratName">
-        <button onclick="getStrategy()" class="submitStrategy buttonSingle" type="button" name="submitStrategy">Get strategy!!!</button>
-        <button onclick="submitStrategy()" class="submitStrategy buttonSingle" type="button" name="submitStrategy">SUBMIT!!!</button>
+        <p><label>question tutorfreeID:</label></p>
+        <input type="text" id="tutorfreeID">
+        <button onclick="getQuestion()" class="submitStrategy buttonSingle" type="button" name="submitStrategy">Get Question</button>
+        <button onclick="nextQuestion()" class="submitStrategy buttonSingle" type="button" name="submitStrategy">Next Question</button>
       </div>
-      <p><label>PageNum:</label></p>
-      <input type="number" id="pageNum" name="pageNum" min="1" max="10" value="1">
-      <p><label>Texts:</label></p>
+      <div class="questionText">
+        <p><label>question:</label></p>
+        <div id="questionText" rows="8" cols="80"></div>
+      </div>
+
+      <div class="questionText">
+        <p><label>ans1:</label></p>
+        <div id="ans1" rows="8" cols="80"></div>
+      </div>
+      <div class="questionText">
+        <p><label>ans2:</label></p>
+        <div id="ans2" rows="8" cols="80"></div>
+      </div>
+      <div class="questionText">
+        <p><label>ans3:</label></p>
+        <div id="ans3" rows="8" cols="80"></div>
+      </div>
+      <div class="questionText">
+        <p><label>ans4:</label></p>
+        <div id="ans4" rows="8" cols="80"></div>
+      </div>
+
+      <p><label>Explanation:</label></p>
       <div class="everything">
-        <textarea id="stratInput" name="textInput" class="stratInput" rows="10" cols="20"></textarea>
+        <textarea id="explanationInput" name="textInput" class="stratInput" rows="10" cols="80"></textarea>
         <div class="buttons">
           <button onclick="latexTapped(stratInput)" class="latexButton buttonSingle" type="button" name="latexButton">LATEX</button>
           <button onclick="endlatexTapped(stratInput)" class="endlatexButton buttonSingle" type="button" name="endlatexButton">ENDLATEX</button>
@@ -36,9 +56,9 @@
         </div>
         <div id="result0" class="result"></div>
       </div>
-      <p><label>Formulas:</label></p>
+      <p><label>MonteWay:</label></p>
       <div class="everything">
-        <textarea id="formulaInput" name="formulaInput" class="stratInput" rows="10" cols="20"></textarea>
+        <textarea id="montewayInput" name="formulaInput" class="stratInput" rows="10" cols="80"></textarea>
         <div class="buttons">
           <button onclick="latexTapped(formulaInput)" class="latexButton buttonSingle" type="button" name="latexButton">LATEX</button>
           <button onclick="endlatexTapped(formulaInput)" class="endlatexButton buttonSingle" type="button" name="endlatexButton">ENDLATEX</button>
@@ -47,31 +67,8 @@
         </div>
         <div id="result1" class="result"></div>
       </div>
-      <p><label>Question:</label></p>
-      <div class="everything">
-        <textarea id="questionInput" name="questionInput" class="stratInput" rows="10" cols="20"></textarea>
-        <div class="buttons">
-          <button onclick="latexTapped(questionInput)" class="latexButton buttonSingle" type="button" name="latexButton">LATEX</button>
-          <button onclick="endlatexTapped(questionInput)" class="endlatexButton buttonSingle" type="button" name="endlatexButton">ENDLATEX</button>
-          <button onclick="fracTapped(questionInput)" class="fracButton buttonSingle" type="button" name="fracButton">FRAC</button>
-          <button onclick="sqrtTapped(questionInput)" class="sqrtButton buttonSingle" type="button" name="sqrtButton">SQRT</button>
-        </div>
-        <div id="result2" class="result"></div>
-      </div>
-      <p><label>Hint:</label></p>
-      <input type="text" id="hint">
-      <p><label>Matches:</label></p>
-      <div class="everything">
-        <textarea id="matchesInput" name="matchesInput" class="matchesInput" rows="10" cols="20"></textarea>
-      </div>
-      <form>
-        <input type="radio" id="matching" name="matching" value="matching" >
-        <label for="matching">Matching</label><br>
-        <input type="radio" id="notmatching" name="matching" value="notmatching" checked="checked">
-        <label for="notmatching">Not Matching</label><br>
-      </form>
-      <p><label>Answer:</label></p>
-      <input type="text" id="answer">
+      <button onclick="submitExplanation()" class="submitStrategy buttonSingle" type="button" name="submitStrategy">SUBMIT!!!</button>
+
     </div>
 
 

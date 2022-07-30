@@ -34,7 +34,7 @@ function sqrtTapped(id) {
 
 $(document).ready(function() {
   const textareas = document.getElementsByClassName("stratInput")
-
+  console.log("ok2")
   for (let i = 0; i < textareas.length; i++) {
     const textarea = textareas[i]
     textarea.addEventListener("input", event => {
